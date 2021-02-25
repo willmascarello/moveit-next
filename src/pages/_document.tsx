@@ -1,7 +1,4 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document';
-// What is declared here is always load on all Pages. Doesn't recalculate when user access different Pages.
-// This is static
-
 export default class MyDocument extends Document {
   render () {
     return(
@@ -18,6 +15,6 @@ export default class MyDocument extends Document {
           <NextScript/>
         </body>
       </Html>
-    )
+    );
   }
 }

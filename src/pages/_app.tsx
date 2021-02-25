@@ -1,9 +1,12 @@
 import '../styles/global.css'
-// What is declared here is always load on all Pages. Recalculate when user access different Pages
-
+import {ChallengesProvider} from '../contexts/ChallengesContext'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ChallengesProvider>
+      <Component {...pageProps} />
+    </ChallengesProvider>
+  )
 }
 
 export default MyApp
