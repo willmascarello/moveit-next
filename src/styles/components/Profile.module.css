@@ -29,3 +29,13 @@
   height: 1rem;
   margin-right: 0.5rem;
 }
+
+@media(max-width: 720px) {
+  
+  .profileContainer img {
+    width: 3.5rem;
+    height: 3.5rem;
+    align-self: start;
+  }
+
+}

@@ -117,3 +117,36 @@
 .ChallengeActive  footer button:hover {
 filter: brightness(0.9);
 }
+
+
+@media(max-width: 720px) {
+  .ChallengeBoxContainer {
+    margin-top: -4rem;
+    min-height: 11rem;
+  }
+  
+  .ChallengeNotActive strong {
+    width: 80%;
+  }
+  
+  .ChallengeNotActive p {
+    margin: 1rem auto;
+  }
+  
+  .ChallengeNotActive p img {
+    height: 2rem;
+  }
+
+  .ChallengeActive header {
+    padding-bottom: 0.5rem ;
+  }
+
+  .ChallengeActive img {
+    display: none;
+  }
+
+  .ChallengeActive strong {
+    display: none;
+  }
+
+}

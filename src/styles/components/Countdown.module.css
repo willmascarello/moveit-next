@@ -77,3 +77,14 @@
   color: var(--text);
   cursor: not-allowed;
 }
+
+@media(max-width: 720px){
+  
+.countdownCountainer > div {
+  font-size: 6rem;
+}
+
+  .countdownCountainer > span {
+    font-size: 4rem;
+  }
+}
