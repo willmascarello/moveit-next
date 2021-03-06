@@ -1,6 +1,6 @@
 
 .container {
-  height: 100vh;
+  height: 90vh;
   max-width: 992px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
@@ -27,5 +27,6 @@
   }
   .container {
     height: 60vh;
+    padding: 0 2rem;
   }
 }
