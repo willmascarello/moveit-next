@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 
@@ -9,8 +10,8 @@ import { Profile } from "../components/Profile";
 import styles from "../styles/pages/Home.module.css"
 import { ChallengeBox } from "../components/ChallengeBox";
 import { CountdownProvider } from '../contexts/CountdownContext';
-import React from 'react';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
+import { LoginProvider } from '../contexts/LoginContext';
 
 
 interface HomeProps {
@@ -42,7 +43,9 @@ export default function Home(props) {
       <CountdownProvider>
         <section>
           <div>
-            <Profile />
+            <LoginProvider>
+              <Profile />
+            </ LoginProvider>
             <CompletedChallenges />
             <Countdown />
           </div>

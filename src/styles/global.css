@@ -13,24 +13,6 @@
     --blue-twitter: #2aa9e0;
   }
 
-
-/* Media Queries - The minor width subscribe the great width valor, when have the equal style or add new style and behavior */
-
-/* Under 1080px of width respect this. Have priority under the large width */
-@media(max-width: 1080px){
-    html{
-        font-size: 93.75%
-    }
-}
-
-/* Under 720px of width respect this. Have priority under the large width  */
-@media(max-width: 720px){
-    html{
-        font-size: 93.75%
-    }
-}
-
-
 /* Styles important in all pages */
 
 body {
@@ -51,3 +33,18 @@ a {
     text-decoration: none;
 }
 
+/* Media Queries - The minor width subscribe the great width valor, when have the equal style or add new style and behavior */
+
+/* Under 1080px of width respect this. Have priority under the large width */
+@media(max-width: 1080px){
+    html{
+        font-size: 93.75%
+    }
+}
+
+/* Under 720px of width respect this. Have priority under the large width  */
+@media(max-width: 720px){
+    html{
+        font-size: 93.75%
+    }
+}

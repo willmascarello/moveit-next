@@ -7,6 +7,7 @@
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .profileContainer div {
@@ -30,12 +31,33 @@
   margin-right: 0.5rem;
 }
 
+.login {
+  border: none;
+  background: none;
+  margin-left: 1rem;
+  align-content: right;
+
+}
+
+.login img {
+  height: 1.2rem;
+  width: auto;
+}
+  
 @media(max-width: 720px) {
   
   .profileContainer img {
     width: 3.5rem;
     height: 3.5rem;
     align-self: start;
+  }
+  .profileContainer input {
+    width: 10rem;
+  }
+
+  .login img {
+    height: 1.2rem;
+    width: auto;
   }
 
 }
