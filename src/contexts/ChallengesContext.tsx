@@ -102,10 +102,8 @@ export function ChallengesProvider({children, ...rest}: ChallengesProviderProps)
 
   }
 
-  console.log(testMode);
   function changeMode() {
     testMode ? setTestMode(false) : setTestMode(true); 
-    console.log(testMode);
   }
 
   return (

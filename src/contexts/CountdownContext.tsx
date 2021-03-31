@@ -19,15 +19,12 @@ export const CountdownContext = createContext({} as CountdownContextData);
 let countdownTimeout: NodeJS.Timeout;
 
 export function CountdownProvider({children}: CountdownProviderProps) {
+  let cicle = 25 * 60;
   const {startNewChallenge, testMode} = useContext(ChallengesContext);
-  const [timer, setTimer] = useState(25);
+  const [timer, setTimer] = useState(cicle);
   const [time, setTime] = useState(timer);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
-
-
-  // console.log('testMode');
-  // console.log(testMode);
 
   const minutes = Math.floor(time / 60);
   const second = time % 60;
@@ -37,10 +34,10 @@ export function CountdownProvider({children}: CountdownProviderProps) {
     setIsActive(true);
   }
 
-  function resetCountdown(){
+  function resetCountdown(t = timer){
     clearTimeout(countdownTimeout);
     setIsActive(false);
-    setTime(timer);
+    setTime(t);
     setHasFinished(false);
   }
 
@@ -58,8 +55,9 @@ export function CountdownProvider({children}: CountdownProviderProps) {
   }, [isActive, time])
 
   useEffect(() => {
-    setTimer(testMode ? 3 : 25);
-    resetCountdown();
+    const t = testMode ? 3 : cicle;
+    setTimer(t);
+    resetCountdown(t);
   }, [testMode])
 
   return (

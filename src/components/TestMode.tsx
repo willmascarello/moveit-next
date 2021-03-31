@@ -8,7 +8,6 @@ export function TestMode() {
 
     return (
         <div>
-            
             {testMode ? <div className={styles.testMode}></div> : ''}
 
             <div className={styles.divSwitch}>
